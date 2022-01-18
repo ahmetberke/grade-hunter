@@ -1,13 +1,14 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const app = express();
 const PORT = process.env.PORT || 3000;
 
-var server = http.createServer((req, res) => {
-  res.writeHead(200, {'content-type':'text/html'});
-  fs.createReadStream('./src/index.html');
+app.use("/phaser", express.static(__dirname + "/node_modules/phaser"))
+app.use("/game", express.static(__dirname + '/src/game'));
+
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/src/index.html');
 });
 
-server.listen(PORT, (err) => {
-  if (err) return console.log('error on running server');
-  console.log(`server started, PORT: ${PORT}`)
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
 });
