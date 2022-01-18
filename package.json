@@ -1,0 +1,27 @@
+{
+  "name": "note-hunter",
+  "version": "1.0.0",
+  "description": "note hunter game with phaser.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmetberke/note-hunter.git"
+  },
+  "keywords": [
+    "game",
+    "phaser.io"
+  ],
+  "author": "Ahmet Berke Tuncel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmetberke/note-hunter/issues"
+  },
+  "homepage": "https://github.com/ahmetberke/note-hunter#readme",
+  "dependencies": {
+    "phaser": "^3.55.2"
+  }
+}
