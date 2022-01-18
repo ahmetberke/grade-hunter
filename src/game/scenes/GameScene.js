@@ -1,9 +1,9 @@
-class GameScreen extends Phaser.Scene {
+class GameScene extends Phaser.Scene {
   constructor() {
     var clickText;
     var noteIcon;
     var iconAnPlus = true;
-		super({ key: 'GameScreen' });
+		super({ key: 'GameScene' });
 	}
 
   preload() {

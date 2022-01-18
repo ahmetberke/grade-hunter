@@ -7,7 +7,7 @@ const config = {
   width: 500,
   height: 600,
   backgroundColor: "b9eaff",
-  scene: [Scene1, Scene2]
+  scene: [StartScene, GameScene]
 };
 
 const game = new Phaser.Game(config);

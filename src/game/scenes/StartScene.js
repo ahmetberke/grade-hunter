@@ -1,10 +1,10 @@
-class StartScreen extends Phaser.Scene {
+class StartScene extends Phaser.Scene {
   constructor() {
     var clickText;
     var noteIcon;
     var iconAnPlus = true;
     var started = false;
-		super({ key: 'StartScreen' });
+		super({ key: 'StartScene' });
 	}
 
   preload() {
@@ -42,8 +42,8 @@ class StartScreen extends Phaser.Scene {
       this.noteIcon.x -= 2;
       if (this.clickText.x >= (this.cameras.main.worldView.x + this.cameras.main.width) * 3 / 2) {
         console.log(this.clickText.x, this.cameras.main.worldView.x * 3 / 2);
-        this.scene.stop("StartScreen");
-        this.scene.start("GameScreen");
+        this.scene.stop("StartScene");
+        this.scene.start("GameScene");
       }
     }
   }
