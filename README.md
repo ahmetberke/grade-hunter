@@ -1,7 +1,9 @@
 # GRADE HUNTER
 
 ## Hikaye
-Kocaeli Üniversitesi rektörü Saadettin Hülagü, sıradan bir gün üniversiteye giderken ters bir şeyler olduğunu girişte güvenliklerin kendisine öğrenci kartı sormasıyla anlamıştı. Hülagü bir anda kendisini bambaşka bir evrende bulmuştu fakat final haftasına denk gelen Hülagünün neler döndüğünü anlamaya vakti yoktu. 
+Kocaeli Üniversitesi rektörü Saadettin Hülagü, sıradan bir gün üniversiteye giderken ters bir şeyler olduğunu girişte güvenliklerin kendisine öğrenci kartı sormasıyla anlamıştı. Hülagü bir anda kendisini bambaşka bir evrende bulmuştu fakat final haftasına denk gelen Hülagünün neler döndüğünü anlamaya vakti yoktu.
+
+![](/src/assets/hulagu.png)
 
 ## Oynanış
 Hülagü ile yukarıdan yağan notları yakalayıp en iyi notu elde etmeye çalışıyorsun. Kırmızı notlardan uzak durmayı unutma ;)
