@@ -12,6 +12,7 @@ class GameScene extends Phaser.Scene {
     var goodgradesText;
     var badgradesTexT;
     var gameOver;
+    var timer;
 		super({ key: 'GameScene' });
 	}
 
@@ -24,6 +25,7 @@ class GameScene extends Phaser.Scene {
   }
 
   create() {
+    this.timer = 20;
     this.gameStats =  {
       grade: 0,
       goodgrade: 0,
@@ -46,7 +48,7 @@ class GameScene extends Phaser.Scene {
 
     const gradeGen = () => {
       var xCoord = (Math.random() * 450) + 25;
-      var gradeList = ['grade', 'grade', 'grade', 'grade', 'goodgrade', 'badgrade', 'badgrade', 'badgrade', 'badgrade', 'badgrade']
+      var gradeList = ['grade', 'grade', 'grade', 'goodgrade', 'badgrade', 'badgrade', 'badgrade', 'badgrade', 'badgrade', 'badgrade'];
       var ngrade = gradeList[Math.floor(Math.random() * gradeList.length)];
       if (ngrade == 'grade') {
         this.grades.create(xCoord, 10, ngrade);
@@ -62,6 +64,20 @@ class GameScene extends Phaser.Scene {
       callbackScope: this,
       loop: true
     })
+  
+    var timerText = this.add.text(20, 20, 'zaman:'+this.timer,  {fontSize: '25px', fill: '#000'});
+    this.time.addEvent({
+      delay: 1000,
+      callback: () => {
+        this.timer--;
+        timerText.setText('zaman:'+this.timer);
+        if (this.timer <= 0) {
+          this.gameOver = true;
+        }
+      },
+      callbackScope: this,
+      loop: true
+    })      
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
@@ -124,8 +140,8 @@ class GameScene extends Phaser.Scene {
     grade.disableBody(true, true);
     if (this.gameStats.point < 100) {
       this.gameStats.goodgrade++;
-      if (this.gameStats.point < 90) {
-        this.gameStats.point+=10;
+      if (this.gameStats.point < 95) {
+        this.gameStats.point+=5;
       }else {
         this.gameStats.point = 100;
       }

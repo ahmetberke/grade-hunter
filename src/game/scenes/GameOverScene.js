@@ -25,9 +25,11 @@ class GameOverScene extends Phaser.Scene {
     const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
     const screenCenterY = this.cameras.main.worldView.y + this.cameras.main.height / 2;
     
-    this.clickText = this.add.text(screenCenterX, screenCenterY - 120, 'tekrar oynamak için tıkla', {fill: '#000000', fontSize: '16px', boundsAlignH: "center", boundsAlignV: "middle"}).setOrigin(0.5);
+    this.clickText = this.add.text(screenCenterX, screenCenterY - 150, 'tekrar oynamak için tıkla', {fill: '#000000', fontSize: '16px', boundsAlignH: "center", boundsAlignV: "middle"}).setOrigin(0.5);
 
-    this.add.text(screenCenterX, screenCenterY - 60, `NOT: ${this.stats.point}`, {fontSize: '32px', fill: '#000', stroke: '#000', strokeThickness: 0}).setOrigin(0.5);
+    this.add.text(screenCenterX, screenCenterY - 90, `NOT: ${this.stats.point}`, {fontSize: '32px', fill: '#000'}).setOrigin(0.5);
+
+    this.add.text(screenCenterX, screenCenterY - 60, `AGNO: ${this.stats.point / 25}`, {fontSize: '15px', fill: '#000'}).setOrigin(0.5);
 
     this.gradeIcon = this.add.sprite(130, screenCenterY, 'grade');
     this.add.text(150, screenCenterY - 12, this.stats.grade, {fontSize: '25px', fill: '#000', stroke: '#000', strokeThickness: 0});
