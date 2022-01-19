@@ -1,7 +1,7 @@
 {
-  "name": "note-hunter",
+  "name": "grade-hunter",
   "version": "1.0.0",
-  "description": "note hunter game with phaser.io",
+  "description": "grade hunter game with phaser.io",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmetberke/note-hunter.git"
+    "url": "git+https://github.com/ahmetberke/grade-hunter.git"
   },
   "keywords": [
     "game",
@@ -18,9 +18,9 @@
   "author": "Ahmet Berke Tuncel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ahmetberke/note-hunter/issues"
+    "url": "https://github.com/ahmetberke/grade-hunter/issues"
   },
-  "homepage": "https://github.com/ahmetberke/note-hunter#readme",
+  "homepage": "https://github.com/ahmetberke/grade-hunter#readme",
   "dependencies": {
     "express": "^4.17.2",
     "phaser": "^3.55.2"
